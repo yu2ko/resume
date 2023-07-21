@@ -18,6 +18,8 @@
         {{#with experience}}
         <section>
             {{> title data=title}}
+            {{!-- big=false можно не писать, так как в компоненте link "false"=значит 0
+            {{> title big=false data=title}} --}}
             <div>
                 <p>
                     {{text}}

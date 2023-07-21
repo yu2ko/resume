@@ -1,0 +1,91 @@
+{{!
+Це код container файлу для summary сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+}}
+
+<div>
+    <header>
+        <div>
+            <h1>{{name.firstname}} {{name.lastname}}</h1>
+        </div>
+        <div>
+            <b>{{position}}</b>
+        </div>
+
+        <br>
+
+        <div>
+            <em>{{salary}}</em>
+        </div>
+
+        <br />
+        <hr />
+    </header>
+
+    <main>
+        <section>
+            {{> title data=summary.title}}
+            {{!-- <div>
+                <h2>{{summary.title}}</h2>
+            </div> --}}
+            <div>
+                <p>
+                    {{summary.text}}
+                </p>
+            </div>
+        </section>
+
+        {{#with experience}}
+        <section>
+            {{> title data=title}}
+            {{!-- <div>
+                <h2>{{title}}</h2>
+            </div> --}}
+            <div>
+                <p>
+                    {{text}}
+                </p>
+            </div>
+        </section>
+        {{/with}}
+    </main>
+
+    <footer>
+        <hr />
+        <br />
+
+        {{!-- {{> link abc=social.email.href}} --}}
+
+        {{#with social}}
+        {{!-- {{#with email}} --}}
+        {{!-- {{> link abc=href info=text}} --}}
+        {{> link data=email}}
+        {{!-- {{> link}} --}}
+        {{!-- <a href='{{href}}'>{{text}}</a> --}}
+        {{!-- / --}}
+        {{!-- {{/with}} --}}
+
+        {{!-- {{#with phone}} --}}
+        {{> link data=phone}}
+        {{!-- {{> link}} --}}
+        {{!-- <a href='{{href}} '>{{text}}</a> --}}
+        {{!-- / --}}
+        {{!-- {{/with}} --}}
+        {{!-- {{#with linkedin}} --}}
+        {{> link data=linkedin}}
+        {{!-- {{> link}} --}}
+        {{!-- <a href='{{href}}' target='_blank'>{{text}}</a> --}}
+        {{!-- {{/with}} --}}
+        {{/with}}
+
+        {{!-- <a href="{{social.email.href}}">{{social.email.text}}</a> /
+        <a href="{{social.phone.href}} ">{{social.phone.text}}</a> /
+        <a href="{{social.linedin.href}}" target="_blank">{{social.linedin.text}}</a> --}}
+    </footer>
+
+</div>
+
+{{!--
+Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+Адже наш layout/default.hbs має вже структуру HTML
+--}}
