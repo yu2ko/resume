@@ -75,42 +75,40 @@
                   <li>{{status}}</li>
                   <br />
                   <em>Teams:</em>
-                  <ul>
-                    {{#each teams}}
-                      <li>{{team_name}}</li>
-                      {{#with team_leader}}
+                  {{#each teams}}
+                    <li>{{team_name}}</li>
+                    {{#with team_leader}}
+                      <li>{{name}},
+                        {{title}},
+                        {{email}}</li>
+                    {{/with}}
+                    <br />
+                    <em>Team member:</em>
+                    <ul>
+                      {{#each team_members}}
                         <li>{{name}},
                           {{title}},
                           {{email}}</li>
-                      {{/with}}
-                      <br />
-                      <em>Team member:</em>
-                      <ul>
-                        {{#each team_members}}
-                          <li>{{name}},
-                            {{title}},
-                            {{email}}</li>
-                          {{#each skills}}
-                            <li>{{this}}</li>
+                        {{#each skills}}
+                          <li>{{this}}</li>
+                        {{/each}}
+                        <br />
+                        <strong>Projects:</strong>
+                        {{#each projects}}
+                          <li>{{name}}</li>
+                          <li>{{description}}</li>
+                          {{#each technologies}}
+                            <li> {{this}}</li>
                           {{/each}}
                           <br />
-                          <strong>Projects:</strong>
-                          {{#each projects}}
-                            <li>{{name}}</li>
-                            <li>{{description}}</li>
-                            {{#each technologies}}
-                              <li> {{this}}</li>
-                            {{/each}}
-                            <br />
-                            <em>Team members:</em>
-                            {{#each team_members}}
-                              <li>{{name}}, {{title}}</li>
-                            {{/each}}
+                          <em>Team members:</em>
+                          {{#each team_members}}
+                            <li>{{name}}, {{title}}</li>
                           {{/each}}
                         {{/each}}
-                      </ul>
-                    {{/each}}
-                  </ul>
+                      {{/each}}
+                    </ul>
+                  {{/each}}
                 {{/each}}
               {{/each}}
             {{/each}}
