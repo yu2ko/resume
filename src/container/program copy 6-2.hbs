@@ -1,0 +1,139 @@
+<div>
+  <main>
+    {{#with program}}
+      <div>
+        <ul>
+          <h1>Excursion</h1>
+          {{#with excursion}}
+            <li>Name: {{name}}</li>
+            {{#with location}}
+              <li>Location: {{city}}</li>
+              <li>Country: {{country}}</li>
+            {{/with}}
+            <li>Date: {{date}}</li>
+            <h2>Program:</h2>
+
+            <li>Name: {{program.0.name}}</li>
+            <li>Type: {{program.0.type}}</li>
+            <li>Duration: {{program.0.duration}}</li>
+
+            {{#each program}}
+              {{#with details}}
+                {{#with museum}}
+                	<h3>Location</h3>
+                  	<li>{{name}}</li>
+                  {{#with location}}
+                  
+                    <li>{{address}}</li>
+                    <li>{{city}}</li>
+                    <li>{{country}}</li>
+
+					<ul>            
+					<h3>Exhibits:</h3>
+					<li>{{../exhibits.0.name}}</li>
+					<li>{{../exhibits.0.artist}}</li>
+					<li>{{../exhibits.0.description}}</li>
+					<li>{{../exhibits.0.audion_guide}}</li>
+					<br>
+					<li>{{../exhibits.1.name}}</li>
+					<li>{{../exhibits.1.artist}}</li>
+					<li>{{../exhibits.1.description}}</li>
+					<li>{{../exhibits.1.audion_guide}}</li>
+					</ul>
+
+				{{!-- {{#each skills}}
+                <li>
+                    {{name}}
+                    {{#if point includeZero=true}} ({{point}}) {{/if}}
+                    {{#if isTop}} (TOP) {{/if}}
+                    {{#unless point includeZero=true}} (не вивчаємо) {{/unless}}
+                    {{#unless point }} {{#if point includeZero=true}} (зараз вивчаємо) {{/if}} {{/unless}}
+                </li>
+                {{/each}} --}}
+
+				{{!-- skills: [
+				{
+				name: 'HTML',
+				point: 10,
+				isTop: true,
+				},
+				{
+				name: 'Handlebars',
+				point: 10,
+				isTop: true,
+				},
+				{
+				name: 'VScode & NPM',
+				point: 9,
+				isTop: false,
+				},
+				{
+				name: 'Git & Terminal',
+				point: 8,
+				},
+				{
+				name: 'React.js',
+				point: 0,
+				},
+				{
+				name: 'PHP',
+				point: null,
+				},
+			], --}}
+
+
+					<h3>Guide:</h3>
+            <li>{{../../guide.name}}</li>
+            <li>{{../../guide.language}}</li>
+            <li>{{../../guide.rating}}</li>
+			
+
+                  {{/with}}
+                {{/with}}
+              {{/with}}
+            {{/each}}
+
+			    <br>
+			    <hr>
+			    
+            <h2>Program:</h2>
+            <li>Name: {{program.1.name}}</li>
+            <li>Type: {{program.1.type}}</li>
+            <li>Duration: {{program.1.duration}}</li>
+
+			{{#each program}}
+              {{#with details}}
+                {{#with venue}}
+                <h3>Venue</h3>
+                  <li>{{name}}</li>
+                  {{#with location}}
+                    <li>{{address}}</li>
+                    <li>{{city}}</li>
+                    <li>{{country}}</li>
+
+          	<h3>Performers:</h3>
+		  	<ul>	
+				<li>{{../../performers.0.name}}</li>
+          		<li>{{../../performers.0.type}}</li>
+					<br>
+				<li>{{../../performers.1.name}}</li>
+          		<li>{{../../performers.1.type}}</li>
+			</ul>
+
+					<h3>Guide:</h3>
+				<li>{{../../guide.name}}</li>
+				<li>{{../../guide.language}}</li>
+				<li>{{../../guide.rating}}</li>
+			
+
+                  {{/with}}
+                {{/with}}
+              {{/with}}
+            {{/each}}
+           
+          {{/with}}
+        </ul>
+      </div>
+    {{/with}}
+  </main>
+</div>
