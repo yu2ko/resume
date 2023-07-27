@@ -14,7 +14,7 @@
                   <h2>Element div :</h2>
                   <li>name: {{../elements.0.name}}</li>
                   <li>description: {{../elements.0.description}}</li>
-                
+
                       <h3>Attributes:</h3>
                       <li>name: {{attributes.0.name}}</li>
                       <li>description:
@@ -48,11 +48,11 @@
               <li>version: {{../languages.1.version}}</li>
               <li>description: {{../languages.1.description}}</li>
               <br />
-                
-                  <h2>Properties :</h2>
-                  <li>name: {{properties.0.name}}</li>
-                  <li>description: {{properties.0.description}}</li>
                 {{#each properties}}
+                  <h2>Properties :</h2>
+                  <li>name: {{../properties.0.name}}</li>
+                  <li>description: {{../properties.0.description}}</li>
+                
                     <h3>Values:</h3>
                       <li>name: {{values.0.value}}</li>
                       <li>description:
@@ -62,9 +62,11 @@
                       <li>description:
                         {{values.1.description}}</li>
                       <br />
+                  {{!-- {{/each}} --}}
                   <h2>Properties :</h2>
                   <li>name: {{../properties.1.name}}</li>
                   <li>description: {{../properties.1.description}}</li>
+                  {{!-- {{#each properties}} --}}
                       <h3>Values:</h3>
                       <li>name: {{values.0.value}}</li>
                       <li>description:
@@ -80,21 +82,23 @@
               <li>version: {{../languages.2.version}}</li>
               <li>description: {{../languages.2.description}}</li>
               <br />
-                  
-                  <h2>Functions :</h2>
-                  <li>name: {{functions.0.name}}</li>
-                  <li>description: {{functions.0.description}}</li>
-                    <br>
                 {{#each functions}} 
+                  <h2>Functions :</h2>
+                  <li>name: {{../functions.0.name}}</li>
+                  <li>description: {{../functions.0.description}}</li>
+                    <br>
+                
                   <h3>Parameters :</h3>
                     <li>name: {{parameters.0.name}}</li>
                     <li>type: {{parameters.0.type}}</li>
                     <li>description: {{parameters.0.description}}</li>
                   <br>
+                {{!-- {{/each}} --}}
                   <h2>Functions :</h2>
                   <li>name: {{../functions.1.name}}</li>
                   <li>description: {{../functions.1.description}}</li>
                     <br>
+                {{!-- {{#each functions}} --}}
                    <h3>Parameters :</h3>          
                   <li>name: {{parameters.1.name}}</li>
                   <li>type: {{parameters.1.type}}</li>
