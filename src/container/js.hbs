@@ -1,0 +1,114 @@
+<div>
+  <main>
+    <div>
+      <h1>{{name}}</h1>
+      <ul>
+        <li>{{description}}</li>
+        {{#with history}}
+          <li>year: {{year}}</li>
+          <li>founder: {{founder}}</li>
+        {{/with}}
+      </ul>
+      <hr />
+      <strong>Types:</strong>
+      <br />
+      {{#each types}}
+        <span class='badge text-bg-primary'>
+          {{this}}</span>
+      {{/each}}
+      <br />
+      <br />
+      <strong>Syntax:</strong>
+      <br />
+      <ul>
+        {{#with syntax}}
+          <li><em>variables:</em></li>
+          {{#each variables}}
+            <span class='badge text-bg-Success'>
+              {{this}}</span>
+          {{/each}}
+          <li><em>functions:</em></li>
+          <span
+            class='badge text-bg-Success'
+          >{{functions}}</span>
+          <li><em>conditionals:</em></li>
+          {{#each conditionals}}
+            <span
+              class='badge text-bg-Success'
+            >{{this}}</span>
+          {{/each}}
+          <li><em>loops:</em></li>
+          {{#each loops}}
+            <span
+              class='badge text-bg-Success'
+            >{{this}}</span>
+          {{/each}}
+          <li><em>classes:</em></li>
+          {{#each classes}}
+            <span
+              class='badge text-bg-Success'
+            >{{this}}</span>
+          {{/each}}
+        {{/with}}
+      </ul>
+      <strong>Features:</strong>
+      <br />
+      {{#each features}}
+        <span class='badge text-bg-Danger'>{{this}}</span>
+      {{/each}}
+      <br />
+      <br />
+      <strong>Libraries:</strong>
+      <br />
+      {{#each libraries}}
+        <span class='badge text-bg-warning'>{{this}}</span>
+      {{/each}}
+      <br />
+      <br />
+      <strong>Tools:</strong>
+      <br />
+      {{#each tools}}
+        <span class='badge text-bg-info'>{{this}}</span>
+      {{/each}}
+      <br />
+      <hr />
+      <strong>Community:</strong>
+      {{#each community}}
+        <ul>
+          <li>
+            <button
+              type='button'
+              class='btn btn-link my-button'
+            >
+              {{name}}:
+              {{type}}
+            </button>
+          </li>
+        </ul>
+      {{/each}}
+
+      {{!-- <br />
+      <button type='button' class='btn btn-link my-button'>
+        <ul>
+          <li>
+            {{community.0.name}}
+            {{community.0.type}}
+          </li>
+          <li>
+            {{community.1.name}}
+            {{community.1.type}}
+          </li>
+          <li>
+            {{community.2.name}}
+            {{community.2.type}}
+          </li>
+          <li>
+            {{community.3.name}}
+            {{community.3.type}}
+          </li>
+        </ul>
+      </button> --}}
+
+    </div>
+  </main>
+</div>
