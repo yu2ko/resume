@@ -812,10 +812,9 @@ router.get('/web', function (req, res) {
   })
 })
 
-// Підключаємо роутер до бек-енду
-module.exports = router
-
 // router.get Створює нам один ентпоїнт
+
+// ================================================================
 
 router.get('/car', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -915,3 +914,6 @@ router.get('/car', function (req, res) {
 })
 
 // ================================================================
+
+// Підключаємо роутер до бек-енду
+module.exports = router
