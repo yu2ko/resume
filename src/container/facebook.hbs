@@ -1,0 +1,100 @@
+<div>
+  <main>
+    <div>
+      <h1><span
+          class='badge bg-primary'
+        >{{name}}</span></h1>
+      <ul>
+        {{#each users}}
+          <h2><span
+              class='badge bg-danger'
+            >Users:</span></h2>
+          <li>id: {{id}}</li>
+          <li>name: {{name}}</li>
+          <li>gender: {{gender}}</li>
+          <li>age: {{age}}</li>
+          <br />
+          {{#each friends}}
+            <ul>
+              <h3><span
+                  class='badge bg-info'
+                >Friends:</span></h3>
+              <h3></h3>
+              <li>id: {{id}}</li>
+              <li>name: {{name}}</li>
+              <li>gender:{{gender}}</li>
+              <li>age: {{age}}</li>
+              <br />
+              {{#each mutual_friends}}
+                <ul>
+                  <h4><span class='badge bg-warning'>Mutual
+                      friends:</span></h4>
+                  <li>id: {{id}}</li>
+                  <li>name: {{name}}</li>
+                  <li>gender: {{gender}}</li>
+                  <li>age: {{age}}</li>
+                </ul>
+                <br />
+                {{#each mutual_friends}}
+                  <ul>
+                    <h4><span
+                        class='badge bg-warning'
+                      >Mutual friends:</span></h4>
+                    <li>id: {{id}}</li>
+                    <li>name: {{name}}</li>
+                    <li>gender: {{gender}}</li>
+                    <li>age: {{age}}</li>
+                  </ul>
+                  <br />
+                {{/each}}
+              {{/each}}
+            </ul>
+            {{#each groups}}
+              <h3><span
+                  class='badge bg-primary'
+                >Groups:</span></h3>
+              <li>id: {{id}}</li>
+              <li>name: {{name}}</li>
+              <li>description: {{description}}</li>
+              <br />
+              {{#each members}}
+                <ul>
+                  <h4><span
+                      class='badge bg-secondary'
+                    >Member:</span></h4>
+                  <li>id: {{id}}</li>
+                  <li>name: {{name}}</li>
+                  <li>gender: {{gender}}</li>
+                  <li>age: {{age}}</li>
+                </ul>
+                <br />
+              {{/each}}
+            {{/each}}
+          {{/each}}
+          <br />
+          {{#each groups}}
+            <h3><span
+                class='badge bg-primary'
+              >Groups:</span></h3>
+            <li>id: {{id}}</li>
+            <li>name: {{name}}</li>
+            <li>description: {{description}}</li>
+            <br />
+            {{#each members}}
+              <ul>
+                <h4><span
+                    class='badge bg-secondary'
+                  >Member:</span></h4>
+                <li>id: {{id}}</li>
+                <li>name: {{name}}</li>
+                <li>gender: {{gender}}</li>
+                <li>age: {{age}}</li>
+              </ul>
+              <br />
+            {{/each}}
+          {{/each}}
+        {{/each}}
+      </ul>
+    </div>
+  </main>
+</div>
