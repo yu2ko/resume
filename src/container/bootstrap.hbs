@@ -1,103 +1,433 @@
-<main>
+<main class='text-bg-light'>
   1
-  <h1 class='text-center'>центрирование Hello World!</h1>
-  <hr />
+  <div class="row gy-5">
+    <section class="col-12">
+      <div class='card text-bg-dark'>
+        <img
+          class='card-img-top'
+          src='https://picsum.photos/400/200'
+          alt='Product photo'
+        />
+        <div class='card-body'>
+          <h5 class='card-title text-bg-primary'>Product #112211</h5>
+          <p class='text-bg-secondary'>Жорсткий диск
+            <br />
+            Toshiba Canvio Basics 4TB</p>
+          <a href='/summary' class='btn btn-primary'>Open</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="col-3">
+      <div class='card text-bg-primary'>
+        <div class='card-body card-header'>
+          {{! <h6 class='card-title'>Menu</h6> }}
+          {{! <div class='display-6'>Menu</div> }}
+          <div>Menu</div>
+        </div>
+
+        <ul class='list-group list-group-flush'>
+          <li class='list-group-item'>
+            <a href='#' class='btn btn-link'>Home page</a>
+          </li>
+          <li class='list-group-item'>
+            <a href='/summary' class='btn btn-link'>Summary</a>
+          </li>
+          <li class='list-group-item'>
+            <a href='/skills' class='btn btn-link'>Skills</a>
+          </li>
+        </ul>
+
+        <div class='card-footer btn-sm'>
+          <button class='btn btn-dark'>Update list</button>
+        </div>
+      </div>
+    </section>
+    
+    <section class="col-9">
+      <table class='table table-striped table-bordered text-bg-light'>
+        <thead>
+          <tr>
+            <th>
+              #id
+            </th>
+            <th>
+              name
+            </th>
+            <th>
+              age
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <th>1</th>
+            <td>John</td>
+            <td>35</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>Ivan</td>
+            <td>39</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  
+  <section class="col-12">
+    <div class="row gx-5 gy-1">
+    <div class="row g-2">
+      <div class="col-6">
+        <div class='card text-bg-warning'>
+          <div class='card-header text-center'>Header</Title></div>
+          <div class='card-body text-center'>
+            <h6 class="card-title">This is title</h6>
+            <p >This is content</p>
+            <button class="btn btn-light">Click me</button>
+          </div>
+          <div class="card-footer text-center">Footer</Footer></div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class='card text-bg-warning'>
+          <div class='card-header text-center'>Header</Title></div>
+          <div class='card-body text-center'>
+            <h6 class="card-title">This is title</h6>
+            <p >This is content</p>
+            <button class="btn btn-light">Click me</button>
+          </div>
+          <div class="card-footer text-center">Footer</Footer></div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class='card text-bg-warning'>
+          <div class='card-header text-center'>Header</Title></div>
+          <div class='card-body text-center'>
+            <h6 class="card-title">This is title</h6>
+            <p >This is content</p>
+            <button class="btn btn-light">Click me</button>
+          </div>
+          <div class="card-footer text-center">Footer</Footer></div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class='card text-bg-warning'>
+          <div class='card-header text-center'>Header</Title></div>
+          <div class='card-body text-center'>
+            <h6 class="card-title">This is title</h6>
+            <p >This is content</p>
+            <button class="btn btn-light">Click me</button>
+          </div>
+          <div class="card-footer text-center">Footer</Footer></div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class='card text-bg-warning'>
+          <div class='card-header text-center'>Header</Title></div>
+          <div class='card-body text-center'>
+            <h6 class="card-title">This is title</h6>
+            <p >This is content</p>
+            <button class="btn btn-light">Click me</button>
+          </div>
+          <div class="card-footer text-center">Footer</Footer></div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class='card text-bg-warning'>
+          <div class='card-header text-center'>Header</Title></div>
+          <div class='card-body text-center'>
+            <h6 class="card-title">This is title</h6>
+            <p >This is content</p>
+            <button class="btn btn-light">Click me</button>
+          </div>
+          <div class="card-footer text-center">Footer</Footer></div>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+  </section>
+
+  </div>
+
+  <br />
+  <br />
+  <br />
+
   2
-  <h1 class='text-center text-uppercase'>большие буквы Hello
-    World!</h1>
-  <hr />
+  <ul class='list-group'>
+    <li class='list-group-item'>Item 1</li>
+    <li class='list-group-item'>
+      <ul class='list-group'>
+        <li class='list-group-item'>Item 1.1</li>
+        <li class='list-group-item'>Item 1.2</li>
+        <li class='list-group-item'>Item 1.3</li>
+      </ul>
+    </li>
+    <li class='list-group-item'>Item 2</li>
+    <li class='list-group-item'>Item 3</li>
+  </ul>
+
+  <br />
+
   3
-  <h2 class='text-end'>в конце строки Hello World!</h2>
-  <hr />
+  <h5>Menu</h5>
+  <ul class='list-group'>
+    <li class='list-group-item'>
+      <a href='#' class='btn btn-link'>Home page
+      </a>
+    </li>
+    <li class='list-group-item'>
+      <ul class='list-group'>
+        <li class='list-group-item'>
+          <a href='/summary' class='btn btn-link'>Summary
+          </a>
+        </li>
+        <li class='list-group-item'>Item 1.2</li>
+        <li class='list-group-item'>Item 1.3</li>
+      </ul>
+    </li>
+    <li class='list-group-item'>
+      <a href='/task21' class='btn btn-link'>Task21
+      </a>
+    </li>
+    <li class='list-group-item'>Item 3</li>
+  </ul>
+
+  <br />
+
   4
-  <h2 class='text-end text-lowercase'>маленькие буквы Hello
-    World!</h2>
-  <hr />
+  <div class='card'>
+    <div class='card-header'>
+      <div class='card-title'>Menu</div>
+    </div>
+
+    <ul class='list-group'>
+      <li class='list-group-item'>
+        <a href='#' class='btn btn-link'>Home page
+        </a>
+      </li>
+      <li class='list-group-item'>
+        <ul class='list-group'>
+          <li class='list-group-item'>
+            <a href='/summary' class='btn btn-link'>Summary
+            </a>
+          </li>
+          <li class='list-group-item'>Item 1.2</li>
+          <li class='list-group-item'>Item 1.3</li>
+        </ul>
+      </li>
+      <li class='list-group-item'>
+        <a href='/task21' class='btn btn-link'>Task21
+        </a>
+      </li>
+      <li class='list-group-item'>Item 3</li>
+    </ul>
+
+  </div>
+
+  <br />
+
   5
-  <h3>Hello World!</h3>
-  <hr />
+
+  <div class='card'>
+    <div class='card-body'>
+      <h5 class='card-title'>Menu</h5>
+
+      <ul class='list-group'>
+        <li class='list-group-item'>
+          <a href='#' class='btn btn-link'>Home page</a>
+        </li>
+        <li class='list-group-item'>
+          <a
+            href='/summary'
+            class='btn btn-link'
+          >Summary</a>
+        </li>
+        <li class='list-group-item'>
+          <a href='/skills' class='btn btn-link'>Skills</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <br />
+
   6
-  <h3 class='text-capitalize'>text in capitalize</h3>
+  <div class='card text-bg-primary'>
+    <div class='card-body card-header'>
+      {{! <h6 class='card-title'>Menu</h6> }}
+      {{! <div class='display-6'>Menu</div> }}
+      <div>Menu</div>
+    </div>
 
-  <hr />
+    <ul class='list-group list-group-flush'>
+      <li class='list-group-item text-bg-warning'>
+        <a href='#' class='btn btn-link'>Home page</a>
+      </li>
+      <li class='list-group-item text-bg-dark'>
+        <a href='/summary' class='btn btn-link'>Summary</a>
+      </li>
+      <li class='list-group-item text-bg-danger'>
+        <a href='/skills' class='btn btn-link'>Skills</a>
+      </li>
+    </ul>
+
+    <div class='card-footer btn-sm'>
+      <button class='btn btn-dark'>Update list</button>
+    </div>
+
+  </div>
+
+  <br />
+
   7
-  <div class='display-1 text-muted'>серый текст Hello World!</div>
-  <hr />
+  <table
+    class='table table-striped table-bordered text-bg-light'
+  >
+    <thead>
+      <tr>
+        <th>
+          #id
+        </th>
+        <th>
+          name
+        </th>
+        <th>
+          age
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <th>1</th>
+        <td>John</td>
+        <td>35</td>
+      </tr>
+      <tr>
+        <th>2</th>
+        <td>Ivan</td>
+        <td>39</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br />
+
   8
-  <h2 class='display-3'>Hello World!</h2>
-  <hr />
+  <div class='card text-bg-success'>
+    <div class='card-header text-center'>Header</Title></div>
+    <div class='card-body text-center'>
+      <h6 class="card-title">This is title</h6>
+      <p >This is content</p>
+      <button class="btn btn-light">Click me</button>
+    </div>
+    <div class="card-footer text-center">Footer</Footer></div>
+  </div>
 
+  <br>
+  <br>
+  <br>
   9
-  <h3 class='display-6'>Hello World!</h3>
 
-  <hr />
+  <div class="row">
+    <div class="col-3">
+      <div class='card text-bg-info'>
+        <div class='card-header text-center'>Header</Title></div>
+        <div class='card-body text-center'>
+          <h6 class="card-title">This is title</h6>
+          <p >This is content</p>
+          <button class="btn btn-light">Click me</button>
+        </div>
+        <div class="card-footer text-center">Footer</Footer></div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class='card text-bg-info'>
+        <div class='card-header text-center'>Header</Title></div>
+        <div class='card-body text-center'>
+          <h6 class="card-title">This is title</h6>
+          <p >This is content</p>
+          <button class="btn btn-light">Click me</button>
+        </div>
+        <div class="card-footer text-center">Footer</Footer></div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class='card text-bg-info'>
+        <div class='card-header text-center'>Header</Title></div>
+        <div class='card-body text-center'>
+          <h6 class="card-title">This is title</h6>
+          <p >This is content</p>
+          <button class="btn btn-light">Click me</button>
+        </div>
+        <div class="card-footer text-center">Footer</Footer></div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
   10
-  <span class='text-muted'>Сірий текст, text-end не працює</span>
-  <hr />
-  11
-  <div class='text-muted text-end'>
-    Сірий текст
-  </div>
-  <hr />
-  12
-  <div class='text-muted text-end'>
-    Сірий
-    <span class='display-6'>текст в конце с помощью div</span>
-  </div>
-  <hr />
-  13
-  <button class='btn btn-primary'>
-    <span class='text-uppercase'>Test button</span>
-    <span class='text-lowercase'>Test button</span>
-    <span class='text-capitalize'>Test button</span>
-    <h1>Primary button</h1>
-  </button>
-  <hr />
-  14
-  <a href='#' class='btn btn-primary'>
-    Primary button
-  </a>
-  <hr />
-  15
-  <p class='text-primary'>My text</p>
-  <p class='text-dark'>My text</p>
-  <p class='text-muted'>My text</p>
-  <hr />
-  16
-  <button class='btn btn-primary btn-lg'>My button</button>
-  <button class='btn btn-outline-success btn-sm'>My button</button>
-  <button class='btn btn-outline-danger'>My button</button>
-  <hr />
-  17
-  <div class='card'>
-    <div class='card-body'>
-      This is content
+  {{!-- <div class="row g-2"> --}}
+  <div class="row gx-5 gy-1">  
+    <div class="col-4">
+      <div class='card text-bg-warning'>
+        <div class='card-header text-center'>Header</Title></div>
+        <div class='card-body text-center'>
+          <h6 class="card-title">This is title</h6>
+          <p >This is content</p>
+          <button class="btn btn-light">Click me</button>
+        </div>
+        <div class="card-footer text-center">Footer</Footer></div>
+      </div>
     </div>
-  </div>
-  <br />
-  <div class='card'>
-    <div class='card-body'>
-      <button class='btn btn-primary btn-lg'>My button</button>
-      <button class='btn btn-outline-success btn-sm'>My
-        button</button>
-      <button class='btn btn-outline-danger'>My button</button>
+    <div class="col-4">
+      <div class='card text-bg-warning'>
+        <div class='card-header text-center'>Header</Title></div>
+        <div class='card-body text-center'>
+          <h6 class="card-title">This is title</h6>
+          <p >This is content</p>
+          <button class="btn btn-light">Click me</button>
+        </div>
+        <div class="card-footer text-center">Footer</Footer></div>
+      </div>
     </div>
-  </div>
-  <br />
-
-  <div class='card'>
-    <div class='card-body'>
-      <p class='text-primary'>My text</p>
-      <p class='text-dark'>My text</p>
-      <p class='text-muted'>My text</p>
+    <div class="col-4">
+      <div class='card text-bg-warning'>
+        <div class='card-header text-center'>Header</Title></div>
+        <div class='card-body text-center'>
+          <h6 class="card-title">This is title</h6>
+          <p >This is content</p>
+          <button class="btn btn-light">Click me</button>
+        </div>
+        <div class="card-footer text-center">Footer</Footer></div>
+      </div>
     </div>
-  </div>
-  <br />
-  <div class='card'>
-    <div class='card-body'>
-      <div class='text-primary'>My text</div>
-      <div class='text-dark'>My text</div>
-      <div class='text-muted'>My text</div>
+    <div class="col-4">
+      <div class='card text-bg-warning'>
+        <div class='card-header text-center'>Header</Title></div>
+        <div class='card-body text-center'>
+          <h6 class="card-title">This is title</h6>
+          <p >This is content</p>
+          <button class="btn btn-light">Click me</button>
+        </div>
+        <div class="card-footer text-center">Footer</Footer></div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class='card text-bg-warning'>
+        <div class='card-header text-center'>Header</Title></div>
+        <div class='card-body text-center'>
+          <h6 class="card-title">This is title</h6>
+          <p >This is content</p>
+          <button class="btn btn-light">Click me</button>
+        </div>
+        <div class="card-footer text-center">Footer</Footer></div>
+      </div>
     </div>
   </div>
 
