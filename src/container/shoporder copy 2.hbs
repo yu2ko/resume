@@ -280,43 +280,31 @@
         </div>
       </div>
     
-      <div class="col-4 pt-5">
-        <div class="pb-2">
-        <div class="card">
+      <div class="col-4">
+        <div class="card ">
           <div class="card-body">
-            <div class="row g-2">
-              <div class="col-8">
-                {{#if action_block.0.isSuccess}}
-                  <button class="btn btn-success mb-2">{{action_block.0.text}}</button>
-                {{/if}}
-                {{#if action_block.1.isDanger}}
-                  <button class="btn btn-danger mb-2">{{action_block.1.text}}</button>
-                {{/if}}
-                {{#if action_block.2.isInfo}}
-                  <button class="btn btn-info mb-2">{{action_block.2.text}}</button>
-                {{/if}}
-              </div>
-            </div>
+            {{#if action_block.0.isSuccess}}
+              <button class="btn btn-success mb-2">{{action_block.0.text}}</button>
+            {{/if}}
+            {{#if action_block.1.isDanger}}
+              <button class="btn btn-danger mb-2">{{action_block.1.text}}</button>
+            {{/if}}
+            {{#if action_block.2.isInfo}}
+              <button class="btn btn-info mb-2">{{action_block.2.text}}</button>
+            {{/if}}
           </div>
-        </div>
         </div>    
         <div class="card">
-          <div class="card-body">
+          <div class="card-body mt-2">
             {{#with total}}
               <h2>{{title}}</h2>
-              <div class="row g-2">
-                <div class="col-6">
                 <span>{{item_list.0.name}}: {{item_list.0.price}}</span>
                 <span>{{item_list.1.name}}: {{item_list.1.price}}</span>
                 <span>{{item_list.2.name}}: {{item_list.2.price}}</span>
-                </div>
               <hr>
-              <div class="col-8">
               <span>{{additional_info.0.text}}: {{additional_info.0.value}}</span>
               <span>{{additional_info.1.text}}: {{additional_info.1.value}}</span>
               <span>{{additional_info.2.text}}: {{additional_info.2.value}}</span>
-                </div>
-              </div>
               <hr>
               {{#with total_price}}
                 <span>{{text}}: {{value}}</span>
