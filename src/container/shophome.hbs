@@ -64,30 +64,28 @@
         <div class='row g-4 mt-5'>
           <div class='col-12'>
             <div class='nav nav-tabs'>
-              <div class='nav nav-tabs'>
-                {{#each tabs}}
-                  <div div class='nav-item'>
-                    {{#if isActive}}
+              {{#each tabs}}
+                <div div class='nav-item'>
+                  {{#if isActive}}
+                    <a
+                      href='#'
+                      class='nav-link active'
+                    ><strong>{{text}}</strong></a>
+                    {{else}}
+                      {{#if isDisabled}}
                       <a
                         href='#'
-                        class='nav-link active'
-                      ><strong>{{text}}</strong></a>
+                        class='nav-link disabled'
+                      >{{text}}</a>
                       {{else}}
-                        {{#if isDisabled}}
-                        <a
-                          href='#'
-                          class='nav-link disabled'
-                        >{{text}}</a>
-                        {{else}}
-                        <a
-                          href='#'
-                          class='nav-link'
-                        >{{text}}</a>
-                      {{/if}}
+                      <a
+                        href='#'
+                        class='nav-link'
+                      >{{text}}</a>
                     {{/if}}
-                  </div>
-                {{/each}}
-             `</div>
+                  {{/if}}
+                </div>
+              {{/each}}
             </div>
        
             <br />
