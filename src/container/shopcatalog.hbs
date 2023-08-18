@@ -207,7 +207,25 @@
       <div class='row'>
         {{#each footer}}
           <div class='col-2'>
+            {{#each this}}
             <div class='nav nav-item'>
+              {{#if @last}}
+              <a
+                class='nav-link disabled'
+                href='{{link}}'
+              >{{text}}
+              </a>
+              {{else}}
+              <a
+                class='nav-link'
+                href='{{link}}'
+              >{{text}}
+              </a>
+              {{/if}}
+            </div>
+            {{/each}}
+
+            {{!-- <div class='nav nav-item'>
               <a
                 class='nav-link'
                 href='{{0.link}}'
@@ -233,7 +251,7 @@
                 class='nav-link disabled'
                 href='{{3.link}}'
               >{{3.text}}</a>
-            </div>
+            </div> --}}
           </div>
         {{/each}}
       </div>
