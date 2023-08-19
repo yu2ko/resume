@@ -38,13 +38,13 @@ var footer = {
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/', function (req, res) {
-  // res.render генерує нам HTML сторінку
+// router.get('/', function (req, res) {
+// res.render генерує нам HTML сторінку
 
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
-  //                  ↑↑ сюди вводимо JSON дані
-})
+//            ↙ cюди вводимо назву файлу з сontainer
+// res.render('index', {})
+//                  ↑↑ сюди вводимо JSON дані
+// })
 
 // ================================================================
 
@@ -69,6 +69,31 @@ router.get('/summary', function (req, res) {
     // },
 
     header,
+
+    navigation: {
+      links: [
+        {
+          text: 'Summary',
+          href: 'http://localhost:3000/summary',
+          isActive: true,
+        },
+        {
+          text: 'Education',
+          href: 'http://localhost:3000/education',
+          isActive: false,
+        },
+        {
+          text: 'Skills',
+          href: 'http://localhost:3000/skills',
+          isActive: false,
+        },
+        {
+          text: 'Work',
+          href: 'http://localhost:3000/work',
+          isActive: false,
+        },
+      ],
+    },
 
     main: {
       summary: {
@@ -132,6 +157,31 @@ router.get('/skills', function (req, res) {
     // },
 
     header,
+
+    navigation: {
+      links: [
+        {
+          text: 'Summary',
+          href: 'http://localhost:3000/summary',
+          isActive: false,
+        },
+        {
+          text: 'Education',
+          href: 'http://localhost:3000/education',
+          isActive: false,
+        },
+        {
+          text: 'Skills',
+          href: 'http://localhost:3000/skills',
+          isActive: true,
+        },
+        {
+          text: 'Work',
+          href: 'http://localhost:3000/work',
+          isActive: false,
+        },
+      ],
+    },
 
     main: {
       skills: [
@@ -225,6 +275,31 @@ router.get('/education', function (req, res) {
 
     header,
 
+    navigation: {
+      links: [
+        {
+          text: 'Summary',
+          href: 'http://localhost:3000/summary',
+          isActive: false,
+        },
+        {
+          text: 'Education',
+          href: 'http://localhost:3000/education',
+          isActive: true,
+        },
+        {
+          text: 'Skills',
+          href: 'http://localhost:3000/skills',
+          isActive: false,
+        },
+        {
+          text: 'Work',
+          href: 'http://localhost:3000/work',
+          isActive: false,
+        },
+      ],
+    },
+
     main: {
       education: [
         {
@@ -307,6 +382,31 @@ router.get('/work', function (req, res) {
     // },
 
     header,
+
+    navigation: {
+      links: [
+        {
+          text: 'Summary',
+          href: 'http://localhost:3000/summary',
+          isActive: false,
+        },
+        {
+          text: 'Education',
+          href: 'http://localhost:3000/education',
+          isActive: false,
+        },
+        {
+          text: 'Skills',
+          href: 'http://localhost:3000/skills',
+          isActive: false,
+        },
+        {
+          text: 'Work',
+          href: 'http://localhost:3000/work',
+          isActive: true,
+        },
+      ],
+    },
 
     main: {
       works: [
@@ -2050,7 +2150,7 @@ router.get('/shophome', function (req, res) {
           link: 'https://www.youtube.com/news',
         },
         {
-          text: 'Fashion & Beauty',
+          text: 'Fashion&Beauty',
           link: 'https://www.youtube.com/channel/UC1x8rV_f-2yPpzlN0JWZXIQ',
         },
         {
@@ -2060,7 +2160,7 @@ router.get('/shophome', function (req, res) {
       ],
       [
         {
-          text: 'Report History',
+          text: 'ReportHistory',
           link: 'https://www.youtube.com/feed/history/report_history',
         },
         {
@@ -2068,7 +2168,7 @@ router.get('/shophome', function (req, res) {
           link: 'https://support.google.com/youtube/?hl=en',
         },
         {
-          text: 'Send Feedback',
+          text: 'SendFeedback',
           link: 'https://support.google.com/youtube/answer/4347644?hl=en',
         },
         {
@@ -2423,7 +2523,7 @@ router.get('/shoporder', function (req, res) {
           link: 'https://www.youtube.com/news',
         },
         {
-          text: 'Fashion & Beauty',
+          text: 'Fashion&Beauty',
           link: 'https://www.youtube.com/channel/UC1x8rV_f-2yPpzlN0JWZXIQ',
         },
         {
@@ -2433,7 +2533,7 @@ router.get('/shoporder', function (req, res) {
       ],
       [
         {
-          text: 'Report History',
+          text: 'ReportHistory',
           link: 'https://www.youtube.com/feed/history/report_history',
         },
         {
@@ -2441,7 +2541,7 @@ router.get('/shoporder', function (req, res) {
           link: 'https://support.google.com/youtube/?hl=en',
         },
         {
-          text: 'Send Feedback',
+          text: 'SendFeedback',
           link: 'https://support.google.com/youtube/answer/4347644?hl=en',
         },
         {
@@ -2681,7 +2781,7 @@ router.get('/shopcart', function (req, res) {
           link: 'https://www.youtube.com/news',
         },
         {
-          text: 'Fashion & Beauty',
+          text: 'Fashion&Beauty',
           link: 'https://www.youtube.com/channel/UC1x8rV_f-2yPpzlN0JWZXIQ',
         },
         {
@@ -2691,7 +2791,7 @@ router.get('/shopcart', function (req, res) {
       ],
       [
         {
-          text: 'Report History',
+          text: 'ReportHistory',
           link: 'https://www.youtube.com/feed/history/report_history',
         },
         {
@@ -2699,7 +2799,7 @@ router.get('/shopcart', function (req, res) {
           link: 'https://support.google.com/youtube/?hl=en',
         },
         {
-          text: 'Send Feedback',
+          text: 'SendFeedback',
           link: 'https://support.google.com/youtube/answer/4347644?hl=en',
         },
         {
@@ -2985,7 +3085,7 @@ router.get('/shopprofile', function (req, res) {
           link: 'https://www.youtube.com/news',
         },
         {
-          text: 'Fashion & Beauty',
+          text: 'Fashion&xxBeauty',
           link: 'https://www.youtube.com/channel/UC1x8rV_f-2yPpzlN0JWZXIQ',
         },
         {
@@ -2995,7 +3095,7 @@ router.get('/shopprofile', function (req, res) {
       ],
       [
         {
-          text: 'Report History',
+          text: 'ReportHistory',
           link: 'https://www.youtube.com/feed/history/report_history',
         },
         {
@@ -3003,7 +3103,7 @@ router.get('/shopprofile', function (req, res) {
           link: 'https://support.google.com/youtube/?hl=en',
         },
         {
-          text: 'Send Feedback',
+          text: 'SendFeedback',
           link: 'https://support.google.com/youtube/answer/4347644?hl=en',
         },
         {
@@ -3284,7 +3384,7 @@ router.get('/shopreview', function (req, res) {
           link: 'https://www.youtube.com/news',
         },
         {
-          text: 'Fashion & Beauty',
+          text: 'Fashion&Beauty',
           link: 'https://www.youtube.com/channel/UC1x8rV_f-2yPpzlN0JWZXIQ',
         },
         {
@@ -3294,7 +3394,7 @@ router.get('/shopreview', function (req, res) {
       ],
       [
         {
-          text: 'Report History',
+          text: 'ReportHistory',
           link: 'https://www.youtube.com/feed/history/report_history',
         },
         {
@@ -3302,7 +3402,7 @@ router.get('/shopreview', function (req, res) {
           link: 'https://support.google.com/youtube/?hl=en',
         },
         {
-          text: 'Send Feedback',
+          text: 'SendFeedback',
           link: 'https://support.google.com/youtube/answer/4347644?hl=en',
         },
         {
@@ -3695,6 +3795,151 @@ router.get('/shopcatalog', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
+
+// ================================================================
+// router.get Створює нам один ентпоїнт
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('index', {
+    layout: 'index',
+
+    page: {
+      title: 'Resume-pet',
+    },
+
+    header: {
+      name: 'Юрій Кузьменко',
+      project: 'Resume project',
+    },
+
+    buttons: [
+      {
+        text: 'Summary',
+        link: 'http://localhost:3000/summary',
+        about: '1. Зразок резюме. Загальна інформація',
+      },
+      {
+        text: 'Education',
+        link: 'http://localhost:3000/education',
+        about: '2. Зразок резюме. Освіта',
+      },
+      {
+        text: 'Skills',
+        link: 'http://localhost:3000/skills',
+        about: '3. Зразок резюме. Навички',
+      },
+      {
+        text: 'Work',
+        link: 'http://localhost:3000/work',
+        about: '4. Зразок резюме. Досвід роботи',
+      },
+      {
+        text: 'Person',
+        link: 'http://localhost:3000/person',
+        about: '5. Зразок резюме Еми Джонсон',
+      },
+      {
+        text: 'Bio',
+        link: 'http://localhost:3000/bio',
+        about: '6. Зразок біографії Альберта Ейнштейна',
+      },
+      {
+        text: 'Program',
+        link: 'http://localhost:3000/program',
+        about: '7. Зразок програми екскурсій',
+      },
+      {
+        text: 'Web',
+        link: 'http://localhost:3000/web',
+        about: '8. Короткий огляд HTML, CSS та JS',
+      },
+      {
+        text: 'JS',
+        link: 'http://localhost:3000/js',
+        about: '9. Короткий огляд мови JavaScript',
+      },
+      {
+        text: 'Car',
+        link: 'http://localhost:3000/car',
+        about: '10. Опис авто із каталогу Toyota',
+      },
+      {
+        text: 'Mac',
+        link: 'http://localhost:3000/mac',
+        about:
+          '11. Опис ноутбука із каталогу Apple MacBook',
+      },
+      {
+        text: 'Facebook',
+        link: 'http://localhost:3000/facebook',
+        about: '12. Друзі у Фейсбуці',
+      },
+      {
+        text: 'Task21',
+        link: 'http://localhost:3000/task21',
+        about: '13. Різновиди можливостей Bootstrap',
+      },
+      {
+        text: 'Task22',
+        link: 'http://localhost:3000/task22',
+        about:
+          '14. Різновиди можливостей Bootstrap. Продовження',
+      },
+      {
+        text: 'Task31',
+        link: 'http://localhost:3000/task31',
+        about: '15. Зразок лендінгу сайта',
+      },
+      {
+        text: 'ShopHome',
+        link: 'http://localhost:3000/shophome',
+        about: '16. Сторінка новин з картками',
+      },
+      {
+        text: 'ShopOrder',
+        link: 'http://localhost:3000/shoporder',
+        about: '17. Ордер замовлення в інтернеті',
+      },
+      {
+        text: 'ShopCart',
+        link: 'http://localhost:3000/shopcart',
+        about: '18. Кошик товарів',
+      },
+      {
+        text: 'ShopProfile',
+        link: 'http://localhost:3000/shopprofile',
+        about: '19. Сторінка замовлення товарів',
+      },
+      {
+        text: 'Shopreview',
+        link: 'http://localhost:3000/shopreview',
+        about: '20. Сторінка відгуків покупців',
+      },
+      {
+        text: 'Shopcatalog',
+        link: 'http://localhost:3000/shopcatalog',
+        about: '21. Каталог ноутбуків',
+      },
+    ],
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+// ================================================================
+// router.get Створює нам один ентпоїнт
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
+// router.get('/', function (req, res) {
+// res.render генерує нам HTML сторінку
+
+//            ↙ cюди вводимо назву файлу з сontainer
+// res.render('index', {})
+//                  ↑↑ сюди вводимо JSON дані
+// })
 
 // ================================================================
 

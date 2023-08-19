@@ -1,11 +1,12 @@
 <div>
   <main>
     <div>
-      <h1><span
+      <h1 class='mb-3'><span
           class='badge bg-primary'
         >{{name}}</span></h1>
-      <ul>
-        {{#each users}}
+
+      {{#each users}}
+        <div class='card card-body mb-3 pb-0'>
           <h2><span
               class='badge bg-danger'
             >Users:</span></h2>
@@ -13,88 +14,97 @@
           <li>name: {{name}}</li>
           <li>gender: {{gender}}</li>
           <li>age: {{age}}</li>
-          <br />
-          {{#each friends}}
-            <ul>
-              <h3><span
-                  class='badge bg-info'
-                >Friends:</span></h3>
-              <h3></h3>
-              <li>id: {{id}}</li>
-              <li>name: {{name}}</li>
-              <li>gender:{{gender}}</li>
-              <li>age: {{age}}</li>
-              <br />
-              {{#each mutual_friends}}
-                <ul>
-                  <h4><span class='badge bg-warning'>Mutual
-                      friends:</span></h4>
-                  <li>id: {{id}}</li>
-                  <li>name: {{name}}</li>
-                  <li>gender: {{gender}}</li>
-                  <li>age: {{age}}</li>
-                </ul>
-                <br />
-                {{#each mutual_friends}}
-                  <ul>
-                    <h4><span
-                        class='badge bg-warning'
-                      >Mutual friends:</span></h4>
-                    <li>id: {{id}}</li>
-                    <li>name: {{name}}</li>
-                    <li>gender: {{gender}}</li>
-                    <li>age: {{age}}</li>
-                  </ul>
-                  <br />
-                {{/each}}
-              {{/each}}
-            </ul>
-            {{#each groups}}
-              <h3><span
-                  class='badge bg-primary'
-                >Groups:</span></h3>
-              <li>id: {{id}}</li>
-              <li>name: {{name}}</li>
-              <li>description: {{description}}</li>
-              <br />
-              {{#each members}}
-                <ul>
-                  <h4><span
-                      class='badge bg-secondary'
-                    >Member:</span></h4>
-                  <li>id: {{id}}</li>
-                  <li>name: {{name}}</li>
-                  <li>gender: {{gender}}</li>
-                  <li>age: {{age}}</li>
-                </ul>
-                <br />
-              {{/each}}
-            {{/each}}
-          {{/each}}
-          <br />
-          {{#each groups}}
-            <h3><span
-                class='badge bg-primary'
-              >Groups:</span></h3>
-            <li>id: {{id}}</li>
-            <li>name: {{name}}</li>
-            <li>description: {{description}}</li>
-            <br />
-            {{#each members}}
+
+          <div class='card card-body mb-3 pb-0 mt-3'>
+            {{#each friends}}
               <ul>
-                <h4><span
-                    class='badge bg-secondary'
-                  >Member:</span></h4>
+                <h3><span
+                    class='badge bg-info'
+                  >Friends:</span></h3>
+                <h3></h3>
                 <li>id: {{id}}</li>
                 <li>name: {{name}}</li>
-                <li>gender: {{gender}}</li>
+                <li>gender:{{gender}}</li>
                 <li>age: {{age}}</li>
+                
+                {{#each mutual_friends}}
+                  <div class='card card-body mb-0 mt-3'>
+                    <ul>
+                      <h4><span class='badge bg-warning'>Mutual
+                          friends:</span></h4>
+                      <li>id: {{id}}</li>
+                      <li>name: {{name}}</li>
+                      <li>gender: {{gender}}</li>
+                      <li>age: {{age}}</li>
+                    </ul>
+                  </div>
+                  {{#each mutual_friends}}
+                    <div class='card card-body mb-0 mt-3'>
+                      <ul>
+                        <h4><span
+                            class='badge bg-warning'
+                          >Mutual friends:</span></h4>
+                        <li>id: {{id}}</li>
+                        <li>name: {{name}}</li>
+                        <li>gender: {{gender}}</li>
+                        <li>age: {{age}}</li>
+                      </ul>
+                    </div>
+                  {{/each}}
+                {{/each}}
+                </div>
               </ul>
-              <br />
+            
+              {{#each groups}}
+                <div class='card card-body mb-3 pb-0 mt-3'>
+                  <h3><span
+                      class='badge bg-primary'
+                    >Groups:</span></h3>
+                  <li>id: {{id}}</li>
+                  <li>name: {{name}}</li>
+                  <li>description: {{description}}</li>
+                  {{#each members}}
+                    <div class='card card-body mb-3 mt-3 pb-0'>
+                      <ul>
+                        <h4><span
+                            class='badge bg-secondary'
+                          >Member:</span></h4>
+                        <li>id: {{id}}</li>
+                        <li>name: {{name}}</li>
+                        <li>gender: {{gender}}</li>
+                        <li>age: {{age}}</li>
+                      </ul>
+                    </div>
+                  {{/each}}
+                </div>
+              {{/each}}
             {{/each}}
-          {{/each}}
-        {{/each}}
-      </ul>
+
+            {{#each groups}}
+              <div div class='card card-body mb-3 pb-0 mt-3'>
+                <h3><span
+                    class='badge bg-primary'
+                  >Groups:</span></h3>
+                <li>id: {{id}}</li>
+                <li>name: {{name}}</li>
+                <li>description: {{description}}</li>
+                {{#each members}}
+                  <div class='card card-body mb-3 pb-0 mt-3'>
+                    <ul>
+                      <h4><span
+                          class='badge bg-secondary'
+                        >Member:</span></h4>
+                      <li>id: {{id}}</li>
+                      <li>name: {{name}}</li>
+                      <li>gender: {{gender}}</li>
+                      <li>age: {{age}}</li>
+                    </ul>
+                  </div>
+                {{/each}}
+              </div>
+            {{/each}}
+        </div>
+      {{/each}}
     </div>
   </main>
 </div>

@@ -13,91 +13,111 @@
         {{/each}}
       </ul>
     </p>
-    <br />
+    {{! <br /> }}
     <hr />
     <section>
       <div>
         <h2>Education:</h2>
-        {{#each education}}
-          <ul>
-            <li>{{degree}}</li>
-            <li>{{field}}</li>
-            <li>{{institution}}</li>
-            <li>{{year}}</li>
-          </ul>
-        {{/each}}
+        <div class='card card-body pb-1 mb-4'>
+          {{#each education}}
+            <ul>
+              <li>{{degree}}</li>
+              <li>{{field}}</li>
+              <li>{{institution}}</li>
+              <li>{{year}}</li>
+            </ul>
+          {{/each}}
+        </div>
 
         <h2>Notable publication:</h2>
-        <ul>
-          <li>{{notable_publications.0.title}}</li>
-          <li>{{notable_publications.0.year}}</li>
-          <li>{{notable_publications.0.publisher}}</li>
-          <br />
-          <li>{{notable_publications.1.title}}</li>
-          <li>{{notable_publications.1.year}}</li>
-          <li>{{notable_publications.1.publisher}}</li>
-        </ul>
+        <div class='card card-body pb-1 mb-4'>
+          <ul>
+            <div class='mb-3'>
+              <li>{{notable_publications.0.title}}</li>
+              <li>{{notable_publications.0.year}}</li>
+              <li>{{notable_publications.0.publisher}}</li>
+            </div>
+            <li>{{notable_publications.1.title}}</li>
+            <li>{{notable_publications.1.year}}</li>
+            <li>{{notable_publications.1.publisher}}</li>
+          </ul>
+        </div>
 
         <h3>Partners:</h3>
-        <ul>
-          <li>{{partners.0.name}}</li>
-          <li>{{partners.0.relationship}}</li>
-          <li>{{partners.0.years}}</li>
-          <br />
-          <li>{{partners.1.name}}</li>
-          <li>{{partners.1.relationship}}</li>
-          <li>{{partners.1.years}}</li>
-        </ul>
+        <div class='card card-body pb-1 mb-4'>
+          <ul>
+            <div class='mb-3'>
+              <li>{{partners.0.name}}</li>
+              <li>{{partners.0.relationship}}</li>
+              <li>{{partners.0.years}}</li>
+            </div>
+            <li>{{partners.1.name}}</li>
+            <li>{{partners.1.relationship}}</li>
+            <li>{{partners.1.years}}</li>
+          </ul>
+        </div>
 
         <h2>Awards:</h2>
-        {{#each awards}}
-          <ul>
-            <li>{{title}}</li>
-            <li>{{year}}</li>
-            <li>{{description}}</li>
-          </ul>
-        {{/each}}
+        <div class='card card-body pb-1 mb-4'>
+          {{#each awards}}
+            <ul>
+              <li>{{title}}</li>
+              <li>{{year}}</li>
+              <li>{{description}}</li>
+            </ul>
+          {{/each}}
+        </div>
 
         <h3>Influenced:</h3>
-        {{#each influenced}}
-          <ul>
-            <li>{{this}}</li>
-          </ul>
-        {{/each}}
+        <div class='card card-body pb-1 mb-4'>
+          {{#each influenced}}
+            <ul>
+              <li>{{this}}</li>
+            </ul>
+          {{/each}}
+        </div>
 
         <h3>Influences:</h3>
-        {{#each influences}}
-          <ul>
-            <li>{{this}}</li>
-          </ul>
-        {{/each}}
+        <div class='card card-body pb-1 mb-4'>
+          {{#each influences}}
+            <ul>
+              <li>{{this}}</li>
+            </ul>
+          {{/each}}
+        </div>
 
         <h3>Quotes:</h3>
-        {{#each quotes}}
-          <ul>
-            <li><q>{{this}}</q></li>
-          </ul>
-        {{/each}}
+        <div class='card card-body pb-1 mb-4'>
+          {{#each quotes}}
+            <ul>
+              <li><q>{{this}}</q></li>
+            </ul>
+          {{/each}}
+        </div>
 
         <h3>Major discoveries:</h3>
-        <ul>
-          <article>
-            <li>{{major_discoveries.0.title}}</li>
-            <li>{{major_discoveries.0.year}}</li>
-            <li>{{major_discoveries.0.description}}</li>
-          </article>
-        </ul>
+        <div class='card card-body pb-1 mb-4'>
+          <ul>
+            <article>
+              <li>{{major_discoveries.0.title}}</li>
+              <li>{{major_discoveries.0.year}}</li>
+              <li>{{major_discoveries.0.description}}</li>
+            </article>
+          </ul>
+        </div>
 
         <h3>Contributions:</h3>
         {{#with contributions}}
-          <ul>
-            <article>
-              <li>{{title}}</li>
-              <li>{{description}}</li>
-              <li>{{year}}</li>
-              <li>{{field}}</li>
-            </article>
-          </ul>
+          <div class='card card-body pb-1 mb-4'>
+            <ul>
+              <article>
+                <li>{{title}}</li>
+                <li>{{description}}</li>
+                <li>{{year}}</li>
+                <li>{{field}}</li>
+              </article>
+            </ul>
+          </div>
         {{/with}}
       </div>
     </section>

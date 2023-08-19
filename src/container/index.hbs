@@ -3,18 +3,45 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
  }}
 
-<div class='p-5'>
-<h1>Hello World!</h1>
+<div class='px-5'>
 
-  {{!-- <h1>USB хаб Type C 12 в 1 HDMI VGA AUX 3.5 mm</h1>
+{{!-- <div class="card card-body">
+    <div class="row">
+      <div class="col-8">
+        <h1 class="mb-0"><strong>{{header.name}}</strong></h1>
+      </div>
+      <div class="col-4">
+        <h2 class="mb-0"><strong>{{header.project}}</strong></h2>
+      </div>
+    </div>
+  </div> --}}
 
-  <button
-    type='button'
-    class='btn btn-primary'
-  >Купити</button>
-</div> --}}
+<hr class=' mt-0 mb-5' />
 
-{{! 
-    Цей код містить лише те, що буде виводитись в <body>
-    Адже наш layout/default.hbs має вже структуру HTML
-}}
+<div class='card card-body text-bg-success'>
+  <h2>Про проект</h2>
+  <p class='ms-3'>
+    Цей проект побудован за допомогою шаблонізатора
+    Handlebars і технології Bootstrap
+  </p>
+</div>
+<div class='card card-body text-bg-secondary'>
+  {{#each buttons}}
+    <div class='card card-body text-bg-light m-1'>
+      <div class='row'>
+        <div class='col-3 text-center'>
+          <a
+            href={{link}}
+            target='_blank'
+            class='btn btn-primary'
+          >{{text}}</a>
+        </div>
+        <div class='col-8 mt-2'>
+          {{about}}
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
+
+<div>

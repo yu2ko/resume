@@ -4,69 +4,100 @@
       <div>
         <h1>Languages:</h1>
         {{#each languages}}
-          <hr />
-          <li>name: <strong>{{name}}</strong></li>
-          <li>version: {{version}}</li>
-          <li>description: {{description}}</li>
-          <hr />
+          {{! <hr /> }}
+          <div class='card card-body text-bg-warning my-5'>
+            <li>name: <strong>{{name}}</strong></li>
+            <li>version: {{version}}</li>
+            <li>description: {{description}}</li>
+          </div>
+          {{! <hr /> }}
           {{! HTML }}
           {{#each elements}}
-            <ul>
-              <li><em>Elements</em>: {{name}} </li>
-              <li>description: {{description}}</li>
-              <br />
-            </ul>
-            {{#each attributes}}
+            <div
+              class='card card-body text-bg-info mb-3 pb-0'
+            >
               <ul>
-                <ul>
-                  <li>name: {{name}} </li>
+                <div class='mb-2'>
+                  <li><em>Elements</em>: {{name}} </li>
                   <li>description: {{description}}</li>
-                  <br />
-                </ul>
+                </div>
               </ul>
-            {{/each}}
+              {{#each attributes}}
+                <div class='card card-body mb-3'>
+                  <ul>
+                    <ul>
+                      <div class='mb-2'>
+                        <li>name: {{name}} </li>
+                        <li>description:
+                          {{description}}</li>
+                      </div>
+                    </ul>
+                  </ul>
+                </div>
+              {{/each}}
+            </div>
           {{/each}}
 
           {{! CSS }}
           {{#each properties}}
-            <em>Properties</em>:
-            <ul>
-              <li>name: {{name}}</li>
-              <li>description: {{description}}</li>
-              <br />
-            </ul>
-            {{#each values}}
+            <div
+              class='card card-body text-bg-info my-3 pb-0'
+            >
+              <em>Properties</em>:
               <ul>
-                <em>Values</em>:
-                <ul>
-                  <li>name: {{value}}</li>
+                <div class='mb-2'>
+                  <li>name: {{name}}</li>
                   <li>description: {{description}}</li>
-                </ul>
-                <br />
+                </div>
               </ul>
-            {{/each}}
+              {{#each values}}
+                <div class='card card-body pb-0 mb-3'>
+                  <ul>
+                    <div class='mb-2'>
+                      <em>Values</em>:
+                      <ul>
+                        <li>name: {{value}}</li>
+                        <li>description:
+                          {{description}}</li>
+                      </ul>
+                    </div>
+                  </ul>
+                </div>
+              {{/each}}
+            </div>
           {{/each}}
 
           {{! JS }}
+
           {{#each functions}}
-            <em>Functions</em>:
-            <ul>
-              <li>name: {{name}}</li>
-              <li>description: {{description}}</li>
-              <br />
-            </ul>
-            {{#each parameters}}
+            <div
+              class='card card-body text-bg-info my-3 pb-0'
+            >
+              <em>Functions:</em>
               <ul>
-                <em>Parameters</em>:
-                <ul>
+                <div class='mb-2'>
                   <li>name: {{name}}</li>
-                  <li>type: {{type}}</li>
                   <li>description: {{description}}</li>
-                </ul>
-                <br />
+                </div>
               </ul>
-            {{/each}}
+              {{#each parameters}}
+                <div class='card card-body pb-0 mb-3'>
+                  <ul>
+                    <em>Parameters</em>:
+                    <div class='mb-2'>
+                      <ul>
+                        <li>name: {{name}}</li>
+                        <li>type: {{type}}</li>
+                        <li>description:
+                          {{description}}</li>
+                      </ul>
+                    </div>
+                  </ul>
+                </div>
+              {{/each}}
+            </div>
           {{/each}}
+
         {{/each}}
       </div>
     {{/with}}

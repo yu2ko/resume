@@ -14,7 +14,6 @@
             </ul>
           </div>
 
-          <br />
           <div>
             <address>
               {{#with address}}
@@ -26,14 +25,15 @@
               {{/with}}
             </address>
           </div>
-          <br />
+
           <hr />
+
         </div>
       </section>
 
       <section>
         <h2>Education</h2>
-        <div>
+        <div class="card card body pt-2">
           {{#each education}}
             <ul>
               <li> {{degree}}</li>
@@ -46,76 +46,77 @@
       </section>
 
       <section>
-        <div>
-          <h2>Work Experience</h2>
-          <ul>
-            {{#each workExperience}}
-              <li>Company:<strong>{{company}}</strong></li>
-              <li> {{title}}</li>
-              <li>
-                {{startDate}}
-                -
-                {{endDate}}
-              </li>
-              {{#each responsibilities}}
-                <li> {{this}}</li>
-              {{/each}}
-              <li>Years founded: {{year_founded}}</li>
-              <li>Industry: {{industry}}</li>
-              <br />
-              <em>Employees:</em>
-              {{#each employees}}
-                <li>{{name}},
-                  {{position}},
-                  {{department}}</li>
-                <br />
-                <strong>Projects:</strong>
-                {{#each projects}}
-                  <li>{{name}}, {{description}}</li>
-                  <li>{{status}}</li>
-                  <br />
-                  <em>Teams:</em>
-                  <ul>
-                    {{#each teams}}
-                      <li>{{team_name}}</li>
-                      {{#with team_leader}}
-                        <li>{{name}},
-                          {{title}},
-                          {{email}}</li>
-                      {{/with}}
-                      <br />
-                      <em>Team member:</em>
-                      <ul>
-                        {{#each team_members}}
-                          <li>{{name}},
-                            {{title}},
-                            {{email}}</li>
-                          {{#each skills}}
-                            <li>{{this}}</li>
-                          {{/each}}
-                          <br />
-                          <strong>Projects:</strong>
-                          {{#each projects}}
-                            <li>{{name}}</li>
-                            <li>{{description}}</li>
-                            {{#each technologies}}
-                              <li> {{this}}</li>
-                            {{/each}}
-                            <br />
-                            <em>Team members:</em>
+        <h2>Work Experience</h2>
+          <div class="card card-body pt-2">
+              {{#each workExperience}}
+                <li>Company:<strong>{{company}}</strong></li>
+                <li> {{title}}</li>
+                <li>
+                  {{startDate}}
+                  -
+                  {{endDate}}
+                </li>
+                {{#each responsibilities}}
+                  <li> {{this}}</li>
+                {{/each}}
+                <li>Years founded: {{year_founded}}</li>
+                <li>Industry: {{industry}}</li>
+                  <div class="mt-3">
+                    <em>Employees:</em>
+                  </div>
+                {{#each employees}}
+                  <li>{{name}},
+                    {{position}},
+                    {{department}}</li>
+                  <div class='card card-body mt-3'>
+                    <strong>Projects:</strong>
+                    {{#each projects}}
+                      <li>{{name}}, {{description}}</li>
+                      <li>{{status}}</li>
+                      <div class="mt-3">
+                        <em>Teams:</em>
+                        {{#each teams}}
+                          <li>{{team_name}}</li>
+                          {{#with team_leader}}
+                            <li>{{name}},
+                              {{title}},
+                              {{email}}</li>
+                          {{/with}}
+                          <div class="mt-3">
+                            <em>Team member:</em>
                             {{#each team_members}}
-                              <li>{{name}}, {{title}}</li>
+                              <li>{{name}},
+                                {{title}},
+                                {{email}}</li>
+                              {{#each skills}}
+                                <li>{{this}}</li>
+                              {{/each}}
+                              <div class="card card-body mt-3">
+                                <strong>Projects:</strong>
+                                {{#each projects}}
+                                  <li>{{name}}</li>
+                                  <li>{{description}}</li>
+                                  {{#each technologies}}
+                                    <li> {{this}}</li>
+                                  {{/each}}
+                                  <div class="mt-3">
+                                    <em>Team members:</em>
+                                    {{#each team_members}}
+                                      <li>{{name}},
+                                        {{title}}</li>
+                                    {{/each}}
+                                  </div>
+                                {{/each}}
+                              </div>
                             {{/each}}
-                          {{/each}}
+                          </div>
                         {{/each}}
-                      </ul>
+                      <div>    
                     {{/each}}
-                  </ul>
+                  </div>
                 {{/each}}
               {{/each}}
-            {{/each}}
-          </ul>
-        </div>
+          </div>
       </section>
     </main>
   {{/with}}

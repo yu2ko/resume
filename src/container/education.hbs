@@ -1,26 +1,32 @@
 <div>
+    {{> navigation}}
+
     {{#with main}}
     <main>
         <section>
             {{> title big=true data='My education'}}
-            <ul class="ps-5">
-                {{#each education}}
-                <li>
-                    {{name}}
-                    {{#unless isEnd}} (ще в процесі) {{/unless}}
-                </li>
-                {{/each}}
-            </ul>
+            <div class="card card-body text-bg-primary pb-0">
+              <ul class="ps-5">
+                  {{#each education}}
+                  <li>
+                      {{name}}
+                      {{#unless isEnd}} <button class="badge bg-success rounded-pill">ще в процесі</button> {{/unless}}
+                  </li>
+                  {{/each}}
+              </ul>
+            </div>
         </section>
         <section>
             {{> title data='My certificates'}}
-            <ul class="ps-5">
-                {{#each certificates}}
-                <li>
-                    {{name}} ({{id}})
-                </li>
-                {{/each}}
-            </ul>
+            <div class="card card-body text-bg-warning pb-0">
+              <ul class="ps-5">
+                  {{#each certificates}}
+                  <li>
+                      {{name}} ({{id}})
+                  </li>
+                  {{/each}}
+              </ul>
+            </div>
         </section>
     </main>
     {{/with}}
