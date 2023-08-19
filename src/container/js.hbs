@@ -9,17 +9,14 @@
           <li>founder: {{founder}}</li>
         {{/with}}
       </ul>
-      <hr />
-      <strong>Types:</strong>
-      <br />
+      <hr class='my-4' />
+      <h2>Types:</h2>
       {{#each types}}
         <span class='badge text-bg-primary'>
           {{this}}</span>
       {{/each}}
-      <br />
-      <br />
-      <strong>Syntax:</strong>
-      <br />
+      <hr class='my-4' />
+      <h2>Syntax:</h2>
       <ul>
         {{#with syntax}}
           <li><em>variables:</em></li>
@@ -51,45 +48,30 @@
           {{/each}}
         {{/with}}
       </ul>
-      <strong>Features:</strong>
-      <br />
+      <hr class='my-4' />
+      <h2>Features:</h2>
       {{#each features}}
-        <span class='badge text-bg-Danger'>{{this}}</span>
+        <p class='badge text-bg-Danger'>{{this}}</p>
       {{/each}}
-      <br />
-      <br />
-      <strong>Libraries:</strong>
-      <br />
+      <hr class='my-4' />
+      <h2>Libraries:</h2>
       {{#each libraries}}
         <span class='badge text-bg-warning'>{{this}}</span>
       {{/each}}
-      <br />
-      <br />
-      <strong>Tools:</strong>
-      <br />
+      <hr class='my-4' />
+      <h2>Tools:</h2>
       {{#each tools}}
         <span class='badge text-bg-info'>{{this}}</span>
       {{/each}}
-      <br />
-      <hr />
-      <strong>Community:</strong>
+      <hr class='my-4' />
+      <h2>Community:</h2>
       {{#each community}}
-        <ul>
-          <li>
-            <button
-              type='button'
-              class='btn btn-link my-button'
-            >
-              {{name}}:
-              {{type}}
-            </button>
-          </li>
-        </ul>
+        <a href='#' class='btn btn-link my-button'>{{name}}:
+          {{type}}</a>
       {{/each}}
 
-      {{!-- <br />
-      <button type='button' class='btn btn-link my-button'>
-        <ul>
+      {{!-- <button type='button' class='btn btn-link my-button'>
+        <ul >
           <li>
             {{community.0.name}}
             {{community.0.type}}

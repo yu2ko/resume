@@ -1,0 +1,20 @@
+<div class='card mx-5'>
+  {{#with navigation}}
+    <div class='nav nav-tabs'>
+      {{#each links}}
+        {{#if isActive}}
+          <div class='nav-item'>
+            <a
+              href={{href}}
+              class='nav-link active'
+            >{{text}}</a>
+          </div>
+        {{else}}
+          <div class='nav-item'>
+            <a href={{href}} class='nav-link'>{{text}}</a>
+          </div>
+        {{/if}}
+      {{/each}}
+    </div>
+  {{/with}}
+</div>

@@ -4,25 +4,32 @@
 }}
 
 <div>
+    {{> navigation}}
+
     {{#with main}}
     <main>
+        
         <section class="mb-5">
+          <div class="card card-body text-bg-success">
             {{> title big=true data=summary.title}}
             <div>
                 <p>
                     {{summary.text}}
                 </p>
             </div>
+          </div>
         </section>
 
         {{#with experience}}
         <section>
+          <div class="card card-body text-bg-info">
             {{> title data=title}}
             <div>
                 <p>
                     {{text}}
                 </p>
             </div>
+          </div>
         </section>
         {{/with}}
     </main>

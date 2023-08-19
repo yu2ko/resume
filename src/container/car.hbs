@@ -8,157 +8,182 @@
         <li>year: {{year}}</li>
         <li>color: {{color}}</li>
       </ul>
-      <br />
-      <h2><span class="badge bg-warning">Features:</span></h2>
+      <hr class="col-8 my-4">
+      <h2 class="mb-3"><span class="badge bg-warning">Features:</span></h2>
       <ul>
         {{#with features}}
-        <h3><span class="badge bg-success"><em>Interior:</em></span></h3>
-          <ul>
-            {{#with interior}}
-            <h4><span class="badge bg-info"><em>Seats:</em></span></h4>
-              {{#with seats}}
-                <ul>
-                  <li>material: {{material}}</li>
-                  <li>color: {{color}}</li>
-                  <li>heated: <span class="badge text-bg-danger">{{#if heated}}present{{else}}absent{{/if}}</span></li>
-                  <li>ventilated: <span class="badge text-bg-danger">{{#if ventilated}}present{{else}}absent{{/if}}</span></li>
-                </ul>
-              {{/with}}
-              <br>
-              <h4><span class="badge bg-info"><em>Dashboard:</em></span></h4>
-                <ul>
-                  {{#with dashboard}}
-                    <li>material: {{material}}</li>
-                    <li>color: {{color}}</li>
-                    <h5><span class="badge bg-secondary"><em>Display:</em></span></h5>
-                    {{#with display}}
-                    <ul>
-                      <li>type: {{type}}</li>
-                      <li>size: {{size}}</li>
-                      <li>resolution: {{resolution}}</li>
-                      <li>touchscreen: <span class="badge text-bg-danger">{{#if touchscreen}}present{{else}}absent{{/if}}</span></li>
-                    </ul>
+          <div class="card card-body col-8 mb-4 pb-0">
+            <h3 class="mb-3"><span class="badge bg-success"><em>Interior:</em></span></h3>
+            <ul>
+              {{#with interior}}
+                  <div class=" card card-body">
+                    <h4><span class="badge bg-info"><em>Seats:</em></span></h4>
+                    {{#with seats}}
+                      <ul>
+                        <li>material: {{material}}</li>
+                        <li>color: {{color}}</li>
+                        <li>heated: <span class="badge text-bg-primary">{{#if heated}}present{{else}}absent{{/if}}</span></li>
+                        <li>ventilated: <span class="badge text-bg-primary">{{#if ventilated}}present{{else}}absent{{/if}}</span></li>
+                      </ul>
                     {{/with}}
+                  </div>
+                    <div class=" card card-body my-3 pb-3">
+                      <h4><span class="badge bg-info"><em>Dashboard:</em></span></h4>
+                      <ul>
+                        {{#with dashboard}}
+                          <li>material: {{material}}</li>
+                          <li>color: {{color}}</li>
+                          <h5><span class="badge bg-secondary"><em>Display:</em></span></h5>
+                          {{#with display}}
+                          <ul>
+                            <li>type: {{type}}</li>
+                            <li>size: {{size}}</li>
+                            <li>resolution: {{resolution}}</li>
+                            <li>touchscreen: <span class="badge text-bg-primary">{{#if touchscreen}}present{{else}}absent{{/if}}</span></li>
+                          </ul>
+                          {{/with}}
+                        {{/with}}
+                      </ul>
+                    </div>
+                <div class=" card card-body my-3 pb-3">
+                  <h4><span class="badge bg-info"><em>Audio:</em></span></h4>
+                  {{#with audio}}
+                    <ul>
+                      <li>system: {{system}}</li>
+                      <li>speakers: {{speakers}}</li>
+                      <li>subwoofer: <span class="badge text-bg-primary">{{#if subwoofer}}present{{else}}absent{{/if}}</span></li>
+                      <li>bluetooth: <span class="badge text-bg-primary">{{#if bluetooth}}present{{else}}absent{{/if}}</span></li>
+                      <li>USB: <span class="badge text-bg-primary">{{#if USB}}present{{else}}absent{{/if}}</span></li>
+                    </ul>
                   {{/with}}
-              </ul>
-              <br>
-              <h4><span class="badge bg-info"><em>Audio:</em></span></h4>
-              {{#with audio}}
+                </div>
+              {{/with}}
+            </ul>
+          </div>
+          <div class="card card-body col-8 mb-4 pb-0">
+            <h3><span class="badge bg-success"><em>Exterior:</em></span></h3>
+            <ul>
+              {{#with exterior}}
+              <div class=" card card-body my-3 pb-3">
+                <h4><span class="badge bg-info"><em>Wheels:</em></span></h4>
+                {{#with wheels}}
                 <ul>
-                  <li>system: {{system}}</li>
-                  <li>speakers: {{speakers}}</li>
-                  <li>subwoofer: <span class="badge text-bg-danger">{{#if subwoofer}}present{{else}}absent{{/if}}</span></li>
-                  <li>bluetooth: <span class="badge text-bg-danger">{{#if bluetooth}}present{{else}}absent{{/if}}</span></li>
-                  <li>USB: <span class="badge text-bg-danger">{{#if USB}}present{{else}}absent{{/if}}</span></li>
+                  <li>size: {{size}}</li>
+                  <li>type: {{type}}</li>
+                  <li>color: {{color}}</li>
                 </ul>
+                {{/with}}
+              </div>
+              <div class=" card card-body my-3 pb-3">
+                <h4><span class="badge bg-info"><em>Headlights:</em></span></h4>
+                {{#with headlights}}
+                <ul>
+                  <li>type: {{type}}</li>
+                  <li>brightness: {{brightness}}</li>
+                  <li>automatic: <span class="badge text-bg-primary">{{#if automatic}}present{{else}}absent{{/if}}</span></li>
+                </ul>
+                {{/with}}
+              </div>
+              <div class=" card card-body my-3 pb-3">
+                <h4><span class="badge bg-info"><em>Sunroof:</em></span></h4>
+                {{#with sunroof}}
+                <ul>
+                  <li>type: {{type}}</li>
+                  <li>size: {{size}}</li>
+                  <li>automatic: <span class="badge text-bg-primary">{{#if automatic}}present{{else}}absent{{/if}}</span></li>
+                </ul>
+                {{/with}}
+              </div>
               {{/with}}
-            {{/with}}
-            <br>
-          </ul>
-          <h3><span class="badge bg-success"><em>Exterior:</em></span></h3>
-          <ul>
-            {{#with exterior}}
-            <h4><span class="badge bg-info"><em>Wheels:</em></span></h4>
-              {{#with wheels}}
-              <ul>
-                <li>size: {{size}}</li>
-                <li>type: {{type}}</li>
-                <li>color: {{color}}</li>
-              </ul>
-              {{/with}}
-              <h4><span class="badge bg-info"><em>Headlights:</em></span></h4>
-              {{#with headlights}}
-              <ul>
-                <li>type: {{type}}</li>
-                <li>brightness: {{brightness}}</li>
-                <li>automatic: <span class="badge text-bg-danger">{{#if automatic}}present{{else}}absent{{/if}}</span></li>
-              </ul>
-              {{/with}}
-              <h4><span class="badge bg-info"><em>Sunroof:</em></span></h4>
-              {{#with sunroof}}
-              <ul>
-                <li>type: {{type}}</li>
-                <li>size: {{size}}</li>
-                <li>automatic: <span class="badge text-bg-danger">{{#if automatic}}present{{else}}absent{{/if}}</span></li>
-              </ul>
-              {{/with}}
-            {{/with}}
-            <br>
-          </ul>
-          <h3><span class="badge bg-success"><em>Safety:</em></span></h3>
+            </ul>
+          </div>
+          <div class="card card-body col-8 mb-4">
+            <h3><span class="badge bg-success"><em>Safety:</em></span></h3>
             <ul>
               {{#with safety}}
-              <h4><span class="badge bg-info"><em>Airbags:</em></span></h4>
-                {{#with airbags}}
-                  <ul>
-                    <li>front: {{front}}</li>
-                    <li>side: {{side}}</li>
-                    <li>knee: {{knee}}</li>
-                    <li>rear: {{rear}}</li>
-                  </ul>
-                {{/with}}
-                <h4><span class="badge bg-info"><em>Assistance:</em></span></h4>
+                <div class="card card-body mt-3 mb-3">
+                  <h4><span class="badge bg-info"><em>Airbags:</em></span></h4>
+                  {{#with airbags}}
+                    <ul>
+                      <li>front: {{front}}</li>
+                      <li>side: {{side}}</li>
+                      <li>knee: {{knee}}</li>
+                      <li>rear: {{rear}}</li>
+                    </ul>
+                  {{/with}}
+                </div>
+                <div class="card card-body">
+                  <h4><span class="badge bg-info"><em>Assistance:</em></span></h4>
                   {{#with assistance}}
                     <ul>
                       <li>blind_spot_monitoring:
-                        <span class="badge text-bg-danger">{{#if blind_spot_monitoring}}present{{else}}absent{{/if}}</span></li>
+                        <span class="badge text-bg-primary">{{#if blind_spot_monitoring}}present{{else}}absent{{/if}}</span></li>
                       <li>rear_cross_traffic_alert:
-                        <span class="badge text-bg-danger">{{#if rear_cross_traffic_alert}}present{{else}}absent{{/if}}</span></b></li>
+                        <span class="badge text-bg-primary">{{#if rear_cross_traffic_alert}}present{{else}}absent{{/if}}</span></b></li>
                       <li>lane_departure_warning:
-                        <span class="badge text-bg-danger">{{#if lane_departure_warning}}present{{else}}absent{{/if}}</span></li>
+                        <span class="badge text-bg-primary">{{#if lane_departure_warning}}present{{else}}absent{{/if}}</span></li>
                       <li>adaptive_cruise_control:
-                        <span class="badge text-bg-danger">{{#if adaptive_cruise_control}}present{{else}}absent{{/if}}</span></li>
+                        <span class="badge text-bg-primary">{{#if adaptive_cruise_control}}present{{else}}absent{{/if}}</span></li>
                       <li>collision_warning:
-                        <span class="badge text-bg-danger">{{#if collision_warning}}present{{else}}absent{{/if}}</span></li>
+                        <span class="badge text-bg-primary">{{#if collision_warning}}present{{else}}absent{{/if}}</span></li>
                     </ul>
                   {{/with}}
+                </div>
               {{/with}}
-            </ul> 
-        {{/with}}
-      <br>
-      <h2><span class="badge bg-warning"><strong>Engine:</strong></span></h2>
-      <ul>
-          {{#with engine}}
-              <li>type: {{type}}</li>
-              <li>displacement: {{displacement}}</li>
-              <li>horsepower: {{horsepower}}</li>
-              <li>torque: {{torque}}</li>
-            <em>Transmission:</em>
-            {{#with transmission}}
-            <ul>
-              <li>type: {{type}}</li>
-              <li>gears: {{gears}}</li>
             </ul>
-            {{/with}}
-          {{/with}}
-      </ul>
-      <br>
-      <h2><span class="badge bg-warning"><strong>Fuel economy:</strong></span></h2>
-      {{#with fuel_economy}}
-      <ul>
-        <li>city: {{city}}l</li>
-        <li>highway: {{highway}}l</li>
-        <li>combined: {{combined}}l</li>
-      </ul>
-      {{/with}}
-      <br>
-      <h2><span class="badge bg-warning"><strong>Price:</strong></span></h2>
-      {{#with price}}
-      <ul>
-        <li>base: {{base}}$</li>
-        <li>destination: {{destination}}$</li>
-        <em>Options:</em>
-        {{#with options}}
-        <ul>
-          <li>navigation: {{navigation}}$</li>
-          <li>moonroof: {{moonroof}}$</li>
-          <li>premium_paint: {{premium_paint}}$</li>
-        </ul>
-      </ul> 
+          </div> 
         {{/with}}
-        <br>
-        <h2><span class="badge bg-danger"><strong>Total: {{total}}$</strong></span></h2>
-      {{/with}}
+        <div class="card card-body col-8 mb-4">
+          <h2><span class="badge bg-warning"><strong>Engine:</strong></span></h2>
+          <ul>
+              {{#with engine}}
+                  <li>type: {{type}}</li>
+                  <li>displacement: {{displacement}}</li>
+                  <li>horsepower: {{horsepower}}</li>
+                  <li>torque: {{torque}}</li>
+                <div class="card card-body pt-1 mt-3">
+                  <em>Transmission:</em>
+                  {{#with transmission}}
+                    <ul>
+                      <li>type: {{type}}</li>
+                      <li>gears: {{gears}}</li>
+                    </ul>
+                </div>
+                {{/with}}
+              {{/with}}
+          </ul>
+        </div>
+        <div class="card card-body col-8 mb-4">
+          <h2><span class="badge bg-warning"><strong>Fuel economy:</strong></span></h2>
+          {{#with fuel_economy}}
+            <ul>
+              <li>city: {{city}}l</li>
+              <li>highway: {{highway}}l</li>
+              <li>combined: {{combined}}l</li>
+            </ul>
+        </div>
+        {{/with}}
+          <div class="card card-body col-8">
+            <h2><span class="badge bg-warning"><strong>Price:</strong></span></h2>
+            {{#with price}}
+              <ul>
+                <li>base: {{base}}$</li>
+                <li>destination: {{destination}}$</li>
+                <div class="card card-body mt-3 pt-1">
+                <em>Options:</em>
+                {{#with options}}
+                <ul>
+                  <li>navigation: {{navigation}}$</li>
+                  <li>moonroof: {{moonroof}}$</li>
+                  <li>premium_paint: {{premium_paint}}$</li>
+                </ul>
+                {{/with}}
+              </ul>
+          </div>
+              <hr class="col-8 my-4">
+              <h2><span class="badge bg-danger"><strong>Total: {{total}}$</strong></span></h2>
+        {{/with}}
+      </div>
     </div>
   </main>
 </div>

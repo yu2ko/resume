@@ -4,34 +4,40 @@
 }}
 
 <div>
+    {{> navigation}}
+
     {{#with main}}
     <main>
         <section>
             {{> title big=true data='All skills'}}
-            <ul>
-                {{#each skills}}
-                <li>
-                    {{name}}
-                    {{#if point includeZero=true}} ({{point}}) {{/if}}
-                    {{#if isTop}} (TOP) {{/if}}
-                    {{#unless point includeZero=true}} (не вивчаємо) {{/unless}}
-                    {{#unless point }} {{#if point includeZero=true}} (зараз вивчаємо) {{/if}} {{/unless}}
-                </li>
-                {{/each}}
-            </ul>
+            <div class="card card-body text-bg-primary pb-0">
+                <ul>
+                    {{#each skills}}
+                    <li>
+                        {{name}}
+                        {{#if point includeZero=true}} ({{point}}) {{/if}}
+                        {{#if isTop}} <button class="badge bg-warning rounded-pill">TOP!</button> {{/if}}
+                        {{#unless point includeZero=true}} <button class="badge bg-secondary rounded-pill">не вивчаємо</button> {{/unless}}
+                        {{#unless point }} {{#if point includeZero=true}} <button class="badge bg-success rounded-pill">зараз вивчаємо</button> {{/if}} {{/unless}}
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
         </section>
         <section>
             {{> title data='My hobbies'}}
             {{!-- big=false можно не писать, так как в компоненте link "false"=значит 0
             {{> title big=false data='My hobbies'}} --}}
-            <ol>
-                {{#each hobbies}}
-                <li>
-                    {{name}}
-                    {{#if isMain}} (favorite) {{/if}}
-                </li>
-                {{/each}}
-            </ol>
+            <div class="card card-body text-bg-secondary pb-0">
+                <ol>
+                    {{#each hobbies}}
+                    <li>
+                        {{name}}
+                        {{#if isMain}} <button class="badge bg-warning rounded-pill">favorite</button> {{/if}}
+                    </li>
+                    {{/each}}
+                </ol>
+            </div>
         </section>
     </main>
     {{/with}}

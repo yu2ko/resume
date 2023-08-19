@@ -1,106 +1,116 @@
 <div>
   <main>
     {{#with program}}
-      <div>
-        <ul>
-          <h1>Excursion</h1>
+      <div class="col-8">
+          <h1 class="mb-3">Excursion</h1>
           {{#with excursion}}
-            <li>Name: {{name}}</li>
-            {{#with location}}
-              <li>Location: {{city}}</li>
-              <li>Country: {{country}}</li>
-            {{/with}}
-            <li>Date: {{date}}</li>
-            <h2>Program:</h2>
-            <li>Name: {{program.0.name}}</li>
-            <li>Type: {{program.0.type}}</li>
-            <li>Duration: {{program.0.duration}}</li>
-
-            {{#each program}}
-              {{#with details}}
-                {{#with museum}}
-                	<h3>Location:</h3>
-                  	<li><span>{{name}},
-					{{#with location}}
-                     {{address}}, {{city}}, {{country}}</span></li>
-
-						<ul>            
-							<h3>Exhibits:</h3>
-							<li>name: {{../exhibits.0.name}}</li>
-							<li>artist: {{#if ../exhibits.0.artist }} {{../exhibits.0.artist}} 
-								{{else}}
-								<em>(unknown)</em>
-								{{/if}}
-							</li>
-							<li>description: {{../exhibits.0.description}}</li>
-							<li>audio guide: {{#if  ../exhibits.0.audio_guide }} 
-								<strong>(present)</strong>  
-								{{else}}
-								<strong>(absent)</strong> 
-								{{/if}} 
-							</li>
-							<br>
-							<li>name: {{../exhibits.1.name}}</li>
-							<li>artist: {{#if ../exhibits.1.artist }} {{../exhibits.1.artist}} 
-								{{else}}
-								<em>(unknown)</em>	
-								{{/if}}
-							</li>
-							<li>description: {{../exhibits.1.description}}</li>
-							<li>audio guide: {{#if  ../exhibits.1.audio_guide }} 
-								<strong>(present)</strong> 
-								{{else}}
-								<strong>(absent)</strong>
-								{{/if}} 
-							</li>
-						</ul>
-
-						<h3>Guide:</h3>
-						<li>name: {{../../guide.name}}</li>
-						<li>language: {{../../guide.language}}</li>
-						<li>rating: {{../../guide.rating}}</li>
-
-                  	{{/with}}
-                {{/with}}
+              <div class="card card-body text-bg-warning py-1 mb-4">
+              <li>Name: {{name}}</li>
+              {{#with location}}
+                <li>Location: {{city}}</li>
+                <li>Country: {{country}}</li>
               {{/with}}
-            {{/each}}
+              <li>Date: {{date}}</li>
+              </div>
+              <h2 class="mb-3">Program:</h2>
+              <div class="card card-body text-bg-info pt-2 mb-4">
+              <li>Name: {{program.0.name}}</li>
+              <li>Type: {{program.0.type}}</li>
+              <li>Duration: {{program.0.duration}}</li>
 
-			    <br>
-			    <hr>
-			    
-            <h2>Program:</h2>
-            <li>Name: {{program.1.name}}</li>
-            <li>Type: {{program.1.type}}</li>
-            <li>Duration: {{program.1.duration}}</li>
-
-			{{#each program}}
-              {{#with details}}
-                {{#with venue}}
-                <h3>Venue:</h3>
-                  <li><span>{{name}}, 
-                  {{#with location}}
-                    {{address}}, {{city}}, {{country}}</span></li>
-
-						<h3>Performers:</h3>
-					<ul>	
-						<li>{{../../performers.0.name}}</li>
-						<li>{{../../performers.0.type}}</li>
-							<br>
-						<li>{{../../performers.1.name}}</li>
-						<li>{{../../performers.1.type}}</li>
-					</ul>
-
-					<h3>Guide:</h3>
-					<li>name: {{../../guide.name}}</li>
-					<li>language: {{../../guide.language}}</li>
-					<li>rating: {{../../guide.rating}}</li>
-
+              {{#each program}}
+                {{#with details}}
+                  {{#with museum}}
+                      <div class="card card-body pt-1 mt-3 text-bg-warning">
+                      <h3>Location:</h3>
+                      <li><span>{{name}},
+                    {{#with location}}
+                      {{address}}, {{city}}, {{country}}</span></li>
+                      </div>
+                      <div class="card card-body pt-1 mt-3">            
+							        <h3>Exhibits:</h3>
+                            <div class="card card-body pt-1 mt-2 mb-3 text-bg-secondary">
+                      <li>name: {{../exhibits.0.name}}</li>
+                      <li>artist: {{#if ../exhibits.0.artist }} {{../exhibits.0.artist}} 
+                        {{else}}
+                        <em>(unknown)</em>
+                        {{/if}}
+                      </li>
+                      <li>description: {{../exhibits.0.description}}</li>
+                      <li>audio guide: {{#if  ../exhibits.0.audio_guide }} 
+                        <strong><button class="badge bg-primary rounded-pill">present</button></strong>  
+                        {{else}}
+                        <strong><button class="badge bg-warning rounded-pill">absent</button></strong> 
+                        {{/if}} 
+                      </li>
+                      </div>
+                      <div class="card card-body pt-1 text-bg-secondary">
+                      <li>name: {{../exhibits.1.name}}</li>
+                      <li>artist: {{#if ../exhibits.1.artist }} {{../exhibits.1.artist}} 
+                        {{else}}
+                        <em><button class="badge bg-warning rounded-pill">unknown</button></em>	
+                        {{/if}}
+                      </li>
+                      <li>description: {{../exhibits.1.description}}</li>
+                      <li>audio guide: {{#if  ../exhibits.1.audio_guide }} 
+                        <strong><button class="badge bg-primary rounded-pill">present</button></strong> 
+                        {{else}}
+                        <strong><button class="badge bg-warning rounded-pill">absent</button></strong>
+                        {{/if}} 
+                      </li>
+                      </div>
+                      </div>
+                      </div>      
+                        <h3 class="mb-2">Guide:</h3>
+                        <div class="card card-body text-bg-success">
+                        <li>name: {{../../guide.name}}</li>
+                        <li>language: {{../../guide.language}}</li>
+                        <li>rating: {{../../guide.rating}}</li>
+                      </div>
+                  	{{/with}}
                   {{/with}}
                 {{/with}}
-              {{/with}}
-            {{/each}}
+              {{/each}}
+
+              <hr class="my-5">
+            
+              <h2 class="mb-2">Program:</h2>
+              <div class="card card-body text-bg-info mb-4">
+              <li>Name: {{program.1.name}}</li>
+              <li>Type: {{program.1.type}}</li>
+              <li>Duration: {{program.1.duration}}</li>
+              </div>
+
+              {{#each program}}
+                {{#with details}}
+                  {{#with venue}}
+                    <h3 class="mb-2">Venue:</h3>
+                    <div class="card card-body text-bg-warning mb-4">
+                      <li><span>{{name}}, 
+                      {{#with location}}
+                        {{address}}, {{city}}, {{country}}</span></li>
+                        </div>
+                        <h3 class="mb-2">Performers:</h3>
+                        <div class="card card-body text-bg-secondary mb-4">
+                        <div class="mb-2">
+                        <li>{{../../performers.0.name}}</li>
+                        <li>{{../../performers.0.type}}</li>
+                                        </div>
+                        <li>{{../../performers.1.name}}</li>
+                        <li>{{../../performers.1.type}}</li>
+                        </div>
+
+                        <h3 class="mb-2">Guide:</h3>
+                        <div class="card card-body text-bg-success">
+                          <li>name: {{../../guide.name}}</li>
+                          <li>language: {{../../guide.language}}</li>
+                          <li>rating: {{../../guide.rating}}</li>
+                        </div>
+                    {{/with}}
+                  {{/with}}
+                {{/with}}
+              {{/each}}
           {{/with}}
-        </ul>
       </div>
     {{/with}}
   </main>
