@@ -154,6 +154,7 @@
       <div class="row mt-3">
         {{#each footer}}
         <div class="col-2">
+
           <div class="nav nav-item">
             <a class="nav-link" href="{{0.link}}">{{0.text}}</a>
           </div>
@@ -169,6 +170,28 @@
           <div class="nav nav-item">
             <a class="nav-link disabled" href="{{3.link}}">{{3.text}}</a>
           </div>
+
+          {{!-- ==========================
+            Альтернативний варіант:
+            {{#each this}}
+            <div class='nav nav-item'>
+              {{#if @last}}
+              <a
+                class='nav-link disabled'
+                href='{{link}}'
+              >{{text}}
+              </a>
+              {{else}}
+              <a
+                class='nav-link'
+                href='{{link}}'
+              >{{text}}
+              </a>
+              {{/if}}
+            </div>
+            {{/each}}
+            ========================== --}}
+
         </div>
         {{/each}}
       </div>
